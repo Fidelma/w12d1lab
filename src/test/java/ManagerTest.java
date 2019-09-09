@@ -49,4 +49,16 @@ public class ManagerTest {
     public void errorISalaryIncreaseNegative() {
         manager.raiseSalary(-1000.00);
     }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void errorSetName(){
+        manager.setName("");
+        assertEquals("Bob", manager.getName());
+    }
+
+    @Test
+    public void canSetName(){
+        manager.setName("Nick");
+        assertEquals("Nick", manager.getName());
+    }
 }

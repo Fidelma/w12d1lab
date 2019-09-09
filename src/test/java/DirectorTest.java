@@ -43,11 +43,13 @@ public class DirectorTest {
 
     @Test
     public void canPayBonus() {
-        assertEquals(400.00, director.payBonus(), 0.01);
+        assertEquals(800.00, director.payBonus(), 0.01);
     }
 
     @Test
     public void canGetBudget() {
         assertEquals(500000.00, director.getBudget(), 0.01);
     }
+
+
 }

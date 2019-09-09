@@ -32,4 +32,11 @@ public abstract class Employee {
     public double payBonus(){
        return this.salary * 0.01;
     }
+
+    public void setName(String name) {
+       if(name == ""){
+           throw new IllegalArgumentException("Name cannot be null");
+       }
+        this.name = name;
+    }
 }
