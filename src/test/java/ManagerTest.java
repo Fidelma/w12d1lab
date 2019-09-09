@@ -44,4 +44,9 @@ public class ManagerTest {
     public void canPayBonus() {
         assertEquals(400.00, manager.payBonus(), 0.01);
     }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void errorISalaryIncreaseNegative() {
+        manager.raiseSalary(-1000.00);
+    }
 }
